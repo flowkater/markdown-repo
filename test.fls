@@ -1,0 +1,11 @@
+PWD /Users/flowkater/work/markdown
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT /Users/flowkater/work/markdown/test.tex
+OUTPUT test.log
+INPUT test.aux
+INPUT test.aux
+OUTPUT test.aux
+OUTPUT test.pdf
+INPUT test.aux
