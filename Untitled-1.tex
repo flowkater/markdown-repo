@@ -1,0 +1,556 @@
+\subsection{V 부분공간의 차원 수 +  V 직교여공간의 차원수 = n} \label{sec:editor}
+\begin{theorem}
+$\matrix{A}_{m\times n}$ 행렬이 있을때 $C(A)$ 는\textbf{A의 좌영공간($N(A^\intercal)$)의 직교여공간}이다.
+
+$\rightarrow C(A) = (N(A^T))^{\perp}$
+\end{theorem}
+
+\newpage
+\begin{theorem}
+$R^n$의 부분공간 $V$ 가 있을때, $V$ 를 이루는 기저 집합 $\{ \vec{v_1}, \vec{v_2}, \cdots, \vec{v_k} \}$ 가 있다면
+
+$dim(V) + dim(V^{\perp}) = n$
+\end{theorem}
+
+\begin{proof}
+
+$A_{n \times k} =[ \vec{v_1} \vec{v_2} \cdots \vec{v_k} ]$
+
+$V = span(\vec{v_1} \vec{v_2} \cdots \vec{v_k}) = C(A)$
+
+$dim(V) = k$
+
+$V^{\perp} = C(A)^{\perp} = N(A^{T})$
+
+$dim(V^{\perp}) = dim(N(A^{T})) = Nullitiy \ of \ A^{T}$
+
+$A^{T}_{k \times n}$
+
+$Rank(A^{T}) + Nullity(A^{T}) = n$
+
+(열공간의 기저 Rank 는 피벗 열의 갯수, 영공간의 기저 Nullity 는 non-pivot 열의 갯수)
+
+$Rank(A) + Nullity(A^{T}) = n \quad (Rank(A^{T}) = Rank(A))$
+
+$dim(C(A)) + dim(N(A^{T})) = n \quad (Rank(A) = dim(C(A)), Nullity(A^{T}) = dim(N(A^{T})))$
+
+$\therefore dim(V) + dim(V^{\perp}) = n$
+\end{proof}
+
+\newpage
+문제1.  $\vec{v_1} = \begin{bmatrix}1 \\ -2 \\ 1 \end{bmatrix}, \vec{v_2} = \begin{bmatrix}1 \\ -1 \\ 3 \end{bmatrix}, \vec{v_3} = \begin{bmatrix}1 \\ 1 \\ 7 \end{bmatrix}$ 으로 생성되는 $R^3$ 의 부분공간 $W$의 직교여공간 $W^{\perp}$의 차원은?
+
+\newpage
+\subsection{부분공간 V와 V의 직교여공간으로 Rn 표현}
+\begin{theorem}
+$R^n$의 부분공간 $V$가 있고 $\vec{x} \in R^n$ 일때,
+
+$\vec{x} = \vec{v} + \vec{w} \quad (\vec{v} \in V, \vec{w} \in V^{\perp})$  로 표현 가능하고 \textbf{유일}하다.
+\end{theorem}
+\begin{proof}
+\end{proof}
+
+\newpage
+\subsection{부분공간 V 의 직교여공간의 직교여공간은 V}
+문제1. $R^n$의 부분공간 $V$가 있을때, $V$의 직교여공간($V^\perp$)을 적으시오.
+
+\newpage
+\begin{definition}
+$R^n$의 부분공간 V가 있을때, 
+
+$\{\vec{x} \in R^n | \vec{x}\cdot \vec{v} = 0$ 이고 모든 $\vec{v} \in V \}$를 만족하는 $x$를\textbf{$V$의 직교여공간}(orthogonal complement of V) 라고하고 $V^\perp$(V perp) 로 표현한다.
+\end{definition}
+
+\begin{definition} 
+$R^n$의 부분공간 V가 있을때, 
+
+$(V^\perp)^\perp = \{\vec{x} \in R^n | \vec{x}\cdot \vec{v} = 0$ 이고 모든 $\vec{v} \in V^\perp \}$를 만족하는 $x$를 \textbf{$V$의 직교여공간의 직교여공간} 으로 표현한다.
+\end{definition}
+
+\begin{theorem}
+$R^n$의 부분공간 V가 있을때, 
+
+$(V^\perp)^\perp = V$
+\end{theorem}
+
+
+\begin{theorem}
+$C(A^{T})^{\perp} = N(A)$
+
+$N(A)^{\perp} = (C(A^T)^{\perp})^{\perp} = C(A^T)$
+
+$C(A)^{\perp} = N(A^{\perp})$
+
+$N(A^T)^{\perp} = (C(A)^{\perp})^{\perp} = C(A)$
+\end{theorem}
+
+\newpage
+\subsection{가장 짧은 해}
+\begin{theorem}
+$A_{m \times n} = [ \vec{a_1} \vec{a_2} \cdots \vec{a_n}]$ 이고 $\vec{b} \in C(A)$ 이면 $A\vec{x} = \vec{b}$ 는 최소 한 개의 해를 가진다.
+
+$\vec{r} \in C(A^T)$ 일때, $A\vec{x}  = \vec{b}$ 의 해 $\vec{r}$ 은\textbf{유일}하다.
+
+그리고 $\vec{r}$ 보다 더\textbf{작은(짧은)} 다른 해를 가질 수 없다.
+\end{theorem}
+
+\newpage
+문제1. $A=\begin{bmatrix} 3 & -2 \\ 6 & -4 \end{bmatrix}, \vec{b} = \begin{bmatrix} 9 \\ 18 \end{bmatrix}$
+
+1) $N(A)$ 를 구하시오.
+
+2) $A\vec{x} = \vec{b}$ 를 구하시오.
+
+3) $C(A^T)$ 를 구하시오.
+
+4) $\vec{b} \in C(A)$ 이고 $A\vec{x} = \vec{b}$ 의\textbf{가장 작은해 (shortest solution)}는 행공간 $C(A^T)$의\textbf{유일한 원소}임을 보이시오.
+
+\newpage
+\subsection{해집합의 행공간 정사영으로 가장 짧은 해 구하기}
+\newpage
+문제1. 직선 $L$ 위의 벡터 $\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ 이 있을 때, $\vec{x} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}$ 의 직선 $L$ 위의 정사영 $proj_L(\vec{x})$ 를 구하시오.
+
+\begin{theorem}
+$R^n$ 의 부분공간 $V$, $R^n$ 의 부분공간 $V$의 직교여공간($V^\perp$) 이 있을때,
+
+$\vec{x} \in R^n$ 이면, $\vec{x} = \vec{v} + \vec{w} \quad (\vec{v} \in V, \vec{w} \in V^{\perp})$ 이라고 했다.
+
+이때, $Proj_v\vec{x} = \vec{v}, Proj_{v^{\perp}}\vec{x} = \vec{w}$ 이기 때문에,
+
+$\vec{x} = Proj_v\vec{x} + Proj_{v^{\perp}}\vec{x}$ 이다.
+\end{theorem}
+
+\newpage
+문제1. $A=\begin{bmatrix} 3 & -2 \\ 6 & -4 \end{bmatrix}, \vec{b} = \begin{bmatrix} 9 \\ 18 \end{bmatrix}$ 일때, $N(A) = span(\begin{bmatrix} 2 \\ 3 \end{bmatrix}), C(A^T) = span(\begin{bmatrix} 3 \\ -2 \end{bmatrix})$,
+
+$A\vec{x} = \vec{b}$ 의 해집합 $\{ \vec{x} = \begin{bmatrix} 3 \\ 0 \end{bmatrix} + c \begin{bmatrix} 2 \\ 3 \end{bmatrix} \ \vert \ c \in R \}$ 이다.
+
+이때, $\vec{x} = \begin{bmatrix} 3 \\ 0 \end{bmatrix}$ 은 $A\vec{x} = \vec{b}$ 의 해 중 하나이다. $C(A^T)$ - $A$의 행공간 위의 정사영 $Proj_{C(A^T)} \begin{bmatrix} 3 \\ 0 \end{bmatrix}$ 를 구하시오.
+
+\newpage
+\subsection{부분공간에서의 정사영}
+\begin{theorem}
+$R^n$의 부분공간 $V$가 있을때 $\vec{x} \in R^n$ 이면,
+
+$Proj_v \vec{x}$ 는 부분공간 $V$에 속하는\textbf{유일한} 벡터 $(Proj_v \vec{x} = \vec{v} \in V)$이며 $\vec{x} = \vec{v} + \vec{w}$ 이라고 할때, $\vec{w}$ 는 $\vec{w} \in V^\perp$ 인\textbf{유일한 원소}이다.
+
+이때, $\vec{w} = \vec{x} - Proj_v \vec{x}$ 이며, 부분공간 $V$의 모든 원소들과 \textbf{직교(Orthogonal)}한다.
+\end{theorem}
+
+\newpage
+\subsection{정사영의 행렬벡터적 표현}
+\begin{theorem}
+$R^n$의 부분공간 $V$가 있고 $V$ 의 기저 집합 $\{\vec{b_1}, \vec{b_2}, \cdots, \vec{b_k}\}$이 있을때,
+
+$A_{n \times k} =  [\vec{b_1}, \vec{b_2}, \cdots, \vec{b_k}], \vec{y} = \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ v_k \end{bmatrix}  (\vec{y} \in R^k)$
+
+$\vec{a} \in V$ 이면 $\vec{a} = y_1\vec{b_1} + y_2\vec{b_2} + \cdots + y_k\vec{b_k} = A\vec{y}$ 이다.
+
+$\vec{x} \in R^n$ 이면 $Proj_v\vec{x} \in V$ 이고 $Proj_v\vec{x} = A\vec{y}$ 로 표현할 수 있다.
+\end{theorem}
+
+\begin{theorem}
+위 정리에서 $Proj_v\vec{x} = A\vec{y}$ 라면,
+
+$Proj_v\vec{x} = A(A^{T}A)^{-1}A^{T}\vec{x}$
+
+정사영은 행렬벡터적으로 표현되며,\textbf{행렬벡터적은 선형변환}이다.
+\end{theorem}
+
+\begin{proof}
+
+$V = C(A)$
+
+$V^{\perp} = C(A)^{\perp} = N(A^{T})$
+
+$\vec{x} - Proj_v\vec{x} = \vec{w} (\vec{w} \in V^{\perp} = (A^{T}))$
+
+즉, $\vec{x} - Proj_v\vec{x} \in (A^{T}) \ (Left Nullspace)$
+
+$A^{T}(\vec{x} - Proj_v\vec{x}) = 0$
+
+$A^{T}\vec{x} - A^{T}Proj_v\vec{x} = 0 \ (Proj_v\vec{x} = A\vec{y})$
+
+$A^{T}\vec{x} = A^{T}A\vec{y}$
+
+$(A^{T}A)^{-1}A^{T}\vec{x} = (A^{T}A)^{-1}A^{T}A\vec{y}$
+
+$\vec{y} = (A^{T}A)^{-1}A^{T}\vec{x}$
+
+$Proj_v\vec{x} = A\vec{y}$
+
+$\therefore Proj_v\vec{x} = A(A^{T}A)^{-1}A^{T}\vec{x}$
+\end{proof}
+
+\newpage
+문제1. $V = span(\begin{bmatrix}1 \\ 0 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix}0 \\ 1 \\ 0 \\ 1\end{bmatrix})$ 일 때, 정사영 $Proj_v \vec{x}$ 를 구하시오.
+
+\newpage
+\subsection{정사영의 다른 계산법}
+
+\begin{lemma}
+$R^n$의 부분공간 $V$가 있고
+
+$\vec{x} \in R^n$ 일때, $\vec{x} = \vec{v} + \vec{w} \ (\vec{v} \in V, \vec{w} \in V^{\perp})$ 이고 
+
+$\vec{x} = Proj_v\vec{x} + Proj_{v^{\perp}}\vec{x}$ 라고 했다.
+
+정사영은 행렬벡터적이기 때문에, 
+
+$Proj_v\vec{x} = B\vec{x}$
+
+$Proj_v^{\perp}\vec{x} = C\vec{x}$
+
+라고하면,
+
+$\vec{x} = B\vec{x} + C\vec{x} = (B + C)\vec{x}$
+
+$I_n\vec{x} = (B + C)\vec{x}$
+
+$I_n = B+C$
+
+$\therefore B = I_n - C $
+\end{lemma}
+
+
+
+\newpage
+문제1.$R^n$의 부분공간 $V$가 있고 $\vec{x} \in R^n$ 일때, 부분공간 $V$ 는 $V = \{ x_1 + x_2 + x_3 = 0  을 만족하는 모든 \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \}$ 이다. 이때 부분공간 $V$에 대한 정사영 $Proj_v\vec{x}$ 를 구하시오.
+
+\newpage
+\subsection{정사영은 부분공간에서 가장 짧은 벡터}
+\begin{theorem}
+$R^n$ 의 부분공간 $V$가 있고 $\vec{x} \in R^n, \vec{v} \in V$ 일때,
+
+$\Vert \vec{x} - Proj_v(\vec{x}) \Vert \leq \Vert \vec{x} - \vec{v} \Vert$
+\end{theorem}
+
+
+
+\newpage
+문제1. $R^n$ 의 부분공간 $V$가 있고 $\vec{x} \in R^n, \vec{v} \in V$ 일때,
+
+$\Vert \vec{x} - Proj_v(\vec{x}) \Vert \leq \Vert \vec{x} - \vec{v} \Vert$ 이 성립하는 것을 증명하시오.
+
+\newpage
+\subsection{최소제곱근사해 (Least Square Approximation)}
+\begin{theorem}
+$A_{n \times k}\vec{x} = \vec{b} (\vec{x} \in R^k, \vec{b} \in R^n)$ 일때,
+
+$A\vec{x} = \vec{b}$ 가 해가 없다면, $\vec{b} \notin C(A)$ 이다.
+
+$A\vec{x}^{\ast}$  일때, $A\vec{x}^{\ast} \in C(A)$ 라고 하면,
+
+이때, $\Vert \vec{b} - A\vec{x}^{\ast} \Vert$ 가\textbf{최소화}되는 $\vec{x}^{\ast}$ 를 구하려면 $A\vec{x}^{\ast} = Proj_{C(A)}\vec{b}$ 이다.
+
+즉, $A^{T}A\vec{x}^{\ast} = A^{T}\vec{b}$ 의 해 $\vec{x}^{\ast}$ 를 구하면 차가 최소가 되는 근사값(\textbf{최소제곱근사해})을 구할 수 있다.
+\end{theorem}
+
+
+
+\newpage
+문제1. 연립방정식 $\begin{cases} 2x - y = 2 \\ x + 2y = 1 \\ x + y = 4 \end{cases}$ 이 있을때, $x, y$ 의 최소제곱근사해를 구하시오.
+
+문제2. $R^2$ 2차원 좌표 $(-1, 0), (0, 1), (1, 2), (2, 1)$ 각 점과 오차가 가장 적게 나는 직선을 구하시오.
+
+
+
+\newpage
+\subsection{기저에 대한 좌표}
+\begin{definition} 
+$$B = \{\vec{v_1}, \vec{v_2}, ..., \vec{v_k}\}$$가 $$R^n$$의 부분공간 V의 기저 집합이고
+
+$${\vec{a}} \in V$$,  $$\vec{a} = c_1\vec{v_1}+ c_2\vec{v_2} +... + c_k\vec{v_k} $$
+
+$$c_1, c_2, c_3, ..., c_k$$ 는\textbf{기저 집합 B에 대한 좌표}(coordinates of $$\vec{a}$$ with respect to B)이다. 
+
+$$[\vec{a}]_B = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix} $$
+
+다음과 같이 표현할 수 있으며\textbf{좌표 벡터}(coordinate vector)라고 부른다.
+\end{definition}
+
+
+
+\begin{definition}  
+기존에 $$\vec{b} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}$$을 (3, -1) 좌표로 표현하는 건\textbf{표준 기저 좌표}(standard basis coordinate)로 표현하는 것이다.
+
+$$\vec{e_1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \vec{e_2} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$ 일대 $$S = \{\vec{e_1}, \vec{e_2}\}$$가 $$R^2$$ 의 기저일때 S를\textbf{표준기저}(standard basic)라고 한다.
+
+$$\begin{bmatrix} x \\ y \end{bmatrix} = x\vec{e_1}+ y\vec{e_2} $$ 로 표현 가능하며 $$[\begin{bmatrix} x \\ y \end{bmatrix}]_S = \begin{bmatrix} x \\ y \end{bmatrix} $$ 이다.
+\end{definition}
+
+
+
+\newpage
+문제1. $$\vec{v_1} = \begin{bmatrix}2 \\ 1\end{bmatrix} \vec{v_2} = \begin{bmatrix}1 \\ 2\end{bmatrix}$$ 이고 $$B = \{\vec{v_1}, \vec{v_2}\}$$가 $$R^2$$의 기저이다.
+
+$$\vec{a} = \begin{bmatrix} 8 \\ 7 \end{bmatrix}$$ 를 기저 집합 B에 대한 좌표 $$[\vec{a}]_B$$로 나타내어라. 
+
+문제2. $$\vec{a} = \begin{bmatrix} 5 \\ -3 \end{bmatrix}$$ 이 $$R^2$$ 표준 기저 집합 S에 대한 좌표일때 표준 기저 $$\vec{e_1},\vec{e_2}$$ 의 선형 결합으로 좌표를 표현하라
+
+\newpage
+\subsection{기저 변환 행렬 (Basis Transformation Matrix)}
+\begin{theorem}
+$B = \{\vec{v_1}, \vec{v_2}, ..., \vec{v_k}\}$가 $R^n$의 부분공간 V의 기저 집합이고
+
+${\vec{a}} \in V$,  $\vec{a} = c_1\vec{v_1}+ c_2\vec{v_2} +... + c_k\vec{v_k}$
+
+기저 집합 B에 대한 좌표는 다음과 같다고 했다.
+
+$[\vec{a}]_B = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix}$
+
+$\vec{a} = c_1\vec{v_1}+ c_2\vec{v_2} +... + c_k\vec{v_k}$
+
+$= [ \vec{v_1} \ \vec{v_2}  \ \cdots \ \vec{v_k} ] \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix} $
+
+$[ \vec{v_1} \ \vec{v_2}  \ \cdots \ \vec{v_k} ]$ 를 행렬 $C_{n \times k}$ 로 두면,
+
+$\vec{a} = C[\vec{a}]_B$ 로 표현할 수 있다.
+\end{theorem}
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix}1 \\ 2 \\ 3 \end{bmatrix}, \vec{v_2} = \begin{bmatrix}1 \\ 0 \\ 1 \end{bmatrix}$ 일때, $B = \{\vec{v_1}, \vec{v_2} \}$ 이고 $[\vec{a}]_B = \begin{bmatrix} 7 \\ -4 \end{bmatrix}$ 일때, $\vec{a}$를 구하시오.
+
+
+
+\newpage
+\subsection{가역이 있는 기저 변환 행렬}
+\begin{theorem}
+$B = \{\vec{v_1}, \vec{v_2}, ..., \vec{v_k}\}$가 $R^n$의 부분공간 V의 기저 집합이고
+
+${\vec{a}} \in V$,  $\vec{a} = c_1\vec{v_1}+ c_2\vec{v_2} +... + c_k\vec{v_k}$ 
+
+$C_{n \times k} = [\vec{v_1} \ \vec{v_2} \ \cdots \ \vec{v_k} ]$
+
+$C[\vec{a}]_B = \vec{a}$ 라고 했다.
+
+이때, $C$가 가역(invertible)이라면 $n=k$ 즉, 정방행렬이며 $B$는 $R^n$의 기저 집합이 된다.
+
+즉, $C$가 가역 $\iff$ $span(B) = R^n$
+
+$ C[\vec{a}]_B = \vec{a}$ 일때,
+
+$ [\vec{a}]_B = C^{-1}\vec{a}$ 이 성립한다.
+\end{theorem}
+
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix} 1 \\ 3 \end{bmatrix}, \vec{v_2} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ 이고 $B = \{ \vec{v_1}, \vec{v_2} \}$ 이고 $B$는 $R^2$의 기저이다. $\vec{a} \in R^2$ 이고 $\vec{a} = \begin{bmatrix} 7 \\ 2 \end{bmatrix}$ 일때, 기저 $B$ 에 관한 $a$의 좌표 $[\vec{a}]_B$ 를 구하시오.
+
+\newpage
+\subsection{상호좌표계를 통한 선형변환관계}
+\begin{theorem}
+선형변환 $T: R^n \rightarrow R^n$ 일때,
+
+$B = \{ v_1, v_2 \cdots v_n  \}$ 이다. $B$는 $R^n$의 기저
+
+$\vec{x} \in R^n$ 일때, 기저 $B$에 대한 $\vec{x} 는 [\vec{x}]_B$ 이다.
+
+$\vec{x} = C[\vec{x}]_B$ - $C$는 표준 기저에서 $B$ 기저를 위한 기저 변환 행렬
+
+$T(\vec{x}) = A\vec{x}$ - $A$는 표준 기저에 대한 선형 변환 행렬
+
+$[T(\vec{x})]_B = D[\vec{x}]_B$ - $D$는 기저집합 $B$에 대한 선형 변환 행렬
+
+$D = C^{-1}AC$
+
+$A = CDC^{-1}$
+\end{theorem}
+
+
+
+
+\newpage
+문제1. $T: R^2 \rightarrow R^2$   $T(\vec{x}) = A\vec{x}$ 이고 $A=\begin{bmatrix} 3 & -2 \\ 2 & -2 \end{bmatrix}$ 이다. $R^2$의 기저 집합 $B = \{ \begin{bmatrix} 1 \\ 2\end{bmatrix}, \begin{bmatrix} 2 \\ 1\end{bmatrix} \}$ 일때, 
+
+1) $[T(\vec{x})]_B = D[\vec{x}]_B$ 의 $D$를 구하시오.
+
+2) $\vec{x}=\begin{bmatrix}1 \\ -1 \end{bmatrix}$ 일때, $\vec{x} \rightarrow [\vec{x}]_B \rightarrow [T(\vec{x})]_B \rightarrow T(\vec{x})$ 방향으로 $T(\vec{x})$ 를 구하시오.
+
+\newpage
+\subsection{정규직교기저 (Orthonormal Basis)}
+\begin{definition} 
+$R^n$ 의 부분공간 $V$가 있고 $V$ 를 생성하는 벡터 집합 $B = \{ \vec{v_1}, \vec{v_2}, \cdots \vec{v_k} \}$ 가 있을때,
+
+1) 모든 벡터의 길이가 1 이다. (정규)
+
+2) 모든 벡터가 서로 직교이다. ($\rightarrow$ 집합 $B$는 선형독립이다.)
+
+두 조건을 만족할때, $B$ 는 부분공간 $V$에 대한\textbf{정규직교기저(Orthonormal Basis)}이다.
+
+1) $\Vert \vec{v_i} \Vert = 1 \quad (for i = 1,2,3 \cdots k)$
+
+$\Vert \vec{v_i} \Vert^{2} = 1 \quad \vec{v_i} \cdot \vec{v_i} = 1$
+
+2) $\vec{v_i} \cdot \vec{v_j} = 0 \quad for \ i \neq j$
+
+$\vec{v_i} \cdot \vec{v_j} = \begin{cases} 0 \quad (i \neq j) \\ 1 \quad (i = j) \end{cases}$
+\end{definition}
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix} {1 \over 3} \\ {2 \over 3} \\ {2 \over 3} \end{bmatrix}, \vec{v_2} = \begin{bmatrix} {2 \over 3} \\ {1 \over 3} \\ -{2 \over 3} \end{bmatrix}$ $B = \{ \vec{v_1}, \vec{v_2} \}$ 가 정규직교기저 집합임을 보여라.
+
+\newpage
+\subsection{정규직교기저는 좋은 좌표계}
+\begin{definition} 
+$R^n$에 대한\textbf{표준기저집합(Standard Basis Set)}
+
+$\{ \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix}, \cdots \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix} \}$
+
+표준기저집합 또한 정규직교기저이다.
+\end{definition}
+
+
+
+\begin{lemma}   
+$B = \{ v_1, v_2 \cdots v_k \}$ 가 부분공간 V에 대해 정규직교기저라면,
+
+$[\vec{x}]_B = \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_k\end{bmatrix} = \begin{bmatrix} \vec{v_1}\cdot\vec{x} \\ \vec{v_2}\cdot\vec{x} \\ \vdots \\ \vec{v_k}\cdot\vec{x}\end{bmatrix}$  로 단순하게 계산할 수 있다.
+\end{lemma}
+
+
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix} {3 \over 5} \\ {4 \over 5} \end{bmatrix}, \vec{v_2} = \begin{bmatrix} -{4 \over 5} \\ {3 \over 5} \end{bmatrix}, B = \{ \vec{v_1}, \vec{v_2} \}$ 가 정규직교기저 집합이다. $\vec{v} = \begin{bmatrix} 9 \\ -2 \end{bmatrix}$ 일때, $[\vec{x}]_B$를 구하라.
+
+문제2. 행렬 $A_{n \times k} = [ \vec{v_1}, \vec{v_2} \cdots \vec{v_k} ]$ 이고 $A$의 열벡터들이 정규직교 기저라고 할때, $A^{T}A$ 를 구하라.
+\newpage
+\subsection{정규직교기저를 이용하여 부분공간에 대한 정사영 구하기}
+\newpage
+문제1. 직선 $L = \{ t\vec{u} \ \vert \ t \in R \} \ (\Vert \vec{u} \Vert = 1)$ 위의 $\vec{x}$ 의 정사영 $Proj_L\vec{x}$ 를 적으시오.
+
+\begin{theorem}
+$R^n$ 의 부분공간 $V$, $R^n$ 의 부분공간 $V$의 직교여공간($V^\perp$) 이 있을때,
+
+$\vec{x} \in R^n$ 이면, $\vec{x} = \vec{v} + \vec{w} \quad (\vec{v} \in V, \vec{w} \in V^{\perp})$ 이라고 했다.
+
+이때, $Proj_v\vec{x} = \vec{v}, Proj_{v^{\perp}}\vec{x} = \vec{w}$ 이기 때문에,
+
+$\vec{x} = Proj_v\vec{x} + Proj_{v^{\perp}}\vec{x}$ 이다.
+
+이때, $B = \{ \vec{v_1},\vec{v_2}, \cdots \vec{v_k} \}$ 가 부분공간 $V$에 대해 정규직교기저 집합이라면,
+
+정사영 $Proj_v\vec{x} = (\vec{v_1}\cdot\vec{x})\vec{v_1} + (\vec{v_2}\cdot\vec{x})\vec{v_2} + \cdots + (\vec{v_k}\cdot\vec{x})\vec{v_k}$ 로 구할 수 있다.
+\end{theorem}
+
+\begin{proof}
+\end{proof}
+
+
+
+\begin{theorem}
+$Proj_v\vec{x} = A(A^{T}A)^{-1}A^{T}\vec{x}$ 인 행렬벡터적으로 표현할 수 있다.
+
+이때, 행렬 $A$를 이루는 열벡터의 집합이 정규직교기저라면
+
+$A^{T}A = I_k$
+
+$(A^{T}A)^{-1} = (I_k)^{-1} = I_k$ 이다.
+
+즉, $Proj_v\vec{x} = AI_kA^{T}\vec{x} = AA^{T}\vec{x}$ 이다.
+\end{theorem}
+
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix} {1 \over 3} \\ {2 \over 3} \\ {2 \over 3} \end{bmatrix}, \vec{v_2} = \begin{bmatrix} {2 \over 3} \\ {1 \over 3} \\ -{2 \over 3} \end{bmatrix}$ $B = \{ \vec{v_1}, \vec{v_2} \}$ 가 정규직교기저 집합이라면, $Proj_v\vec{x}$ 의 변환행렬을 구하시오.
+
+문제2. $R^n$ 의 부분공간 $V$ 가 있을때, $B = \{ \vec{v_1},\vec{v_2}, \cdots \vec{v_k} \}$ 가 부분공간 $V$에 대해 정규직교기저 집합이라면,
+
+$\vec{x} \in R^n$ 일때 정사영 $Proj_v\vec{x}$ 를 구하시오.
+\newpage
+\subsection{정규직교기저 집합의 정방행렬}
+\begin{definition} 
+$n \times n$ 행렬이고 정규직교기저집합이라면
+
+$C_{n \times n} = \begin{bmatrix} \vec{c_1} \ \vec{c_2} \ \cdots \ \vec{c_n} \end{bmatrix} $
+
+$C^{T}C = I_n $
+
+$C^{-1}C = I_n $
+
+$\therefore C^{T} = C^{-1}$
+
+이때 이러한 행렬 C를\textbf{직교행렬}이라고 한다.
+\end{definition}
+
+\newpage
+문제1. $\vec{v_1} = \begin{bmatrix} {2 \over 3} \\ -{2 \over 3} \\ {1 \over 3} \end{bmatrix}, \vec{v_2} = \begin{bmatrix} {2 \over 3} \\ {1 \over 3} \\ -{2 \over 3} \end{bmatrix}, \vec{v_3} = \begin{bmatrix} {1 \over 3} \\ {2 \over 3} \\ {2 \over 3} \end{bmatrix}$ $B=\{ \vec{v_1}, \vec{v_2}, \vec{v_3} \}$ 은 정규직교기저이다. 이때, $V=span(\vec{v_1}, \vec{v_2})$ 이고 선형변환 $T$는 평면 $V$를 기준으로 대칭되는 변환이다. $T(\vec{x}) = A\vec{x}$ 일때, 행렬 $A$를 구하고 모든 원소의 합을 구하시오.
+\newpage
+\subsection{직교행렬은 길이와 각도를 보존한 변환 행렬}
+\begin{theorem}
+
+\end{theorem}
+
+\newpage
+\subsection{그람-슈미트 정규직교 과정 (Gram-Schmit Orthonormal Process)}
+\newpage
+문제2. $R^n$ 의 부분공간 $V$ 가 있을때, $B = \{ \vec{v_1},\vec{v_2}, \cdots \vec{v_k} \}$ 가 부분공간 $V$에 대해 정규직교기저 집합이라면,
+
+$\vec{x} \in R^n$ 일때 정사영 $Proj_v\vec{x}$ 를 구하시오.
+
+\begin{definition} 
+$R^n$의 부분공간 $V$가 있을때, 
+
+부분공간 $V$에 주어진 기저 $\{ \vec{v_1}, \vec{v_2}, \cdots \vec{v_k} \}$ 를 정규직교기저로 바꾸는 과정
+\end{definition}
+
+
+
+
+
+\newpage
+문제1. 부분공간 $V$ 는 $x_1 + x_2 + x_3 = 0$ 평면으로 정의될 때, 부분공간 $V$의 기저를 구하고 정규직교기저로 변환하여라. (그람-슈미트 정규직교 과정)
+
+문제2. 부분공간 $V = span(\begin{bmatrix}0 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix}0 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix}1 \\ 1 \\ 0 \\ 0 \end{bmatrix})$ 의 정규기저 집합을 구하라. (그람-슈미트 정규직교 과정)
+
+\newpage
+\subsection{고유값, 고유벡터 (Eigen Value, Eigen Vector)}
+\begin{theorem}
+
+\end{theorem}
+
+\newpage
+문제1. 고유값, 고유벡터의 각각 정의와 의미에 대해서 작성하시오. (선형변환의 관점에서)
+\newpage
+\subsection{특성 방정식과 고유 공간 (Characteristic Equation and Eigen Space)}
+\begin{theorem}
+선형변환 $T: R^n \rightarrow R^n$,   $T(\vec{x}) = A\vec{x}$ 일때,
+
+$A\vec{v} = \lambda(\vec{v}) \quad (\vec{v} \neq \vec{0}) \iff det(\lambda I_n - A) = 0$
+\end{theorem}
+
+\begin{proof}
+$\vec{0} = \lambda(\vec{v}) - A\vec{v}$
+
+$\lambda I_n (\vec{v}) - A\vec{v} = \vec{0}$
+
+$(\lambda I_n - A)\vec{v} = \vec{0}$
+
+$\vec{v} \in N(\lambda I_n - A)$  영공간으로 표시할 수 있다.
+
+이때, $\vec{v} \neq \vec{0}$ 이기 때문에 $\lambda I_n - A$ 는 선형종속 열 벡터를 가져야 하고 선형종속이라는 건 $\lambda I_n - A$ 가 비가역 즉, 역함수를 가지지 않는다.
+
+그렇다면 행렬식 $det(\lambda I_n - A) = 0$ 이 되면 된다.
+\end{proof}
+
+
+\begin{definition} 
+선형변환 $T: R^n \rightarrow R^n$,   $T(\vec{x}) = A\vec{x}$ 일때,
+
+$A\vec{v} = \lambda(\vec{v}) \quad (\vec{v} \neq \vec{0}) \iff det(\lambda I_n - A) = 0$ 이라고 했다. 이때,
+
+$\vec{v} \in N(\lambda I_n - A)$  $\lambda I_n - A$ 를 특성방정식이라고 하고 
+
+$E_\lambda = N(\lambda I_n - A)$ 일때, $E_\lambda$를\textbf{고유 공간(Eigen Space)}이라고 한다.
+\end{definition}
+
+\newpage
+문제1. $A\vec{v} = \lambda\vec{v}$ 일때, $\lambda$ 를 $A$ 의 고유값 (Eigen Value)이라고 한다. $\vec{v}$ 를 고유 벡터 (Egien Vector)라고 한다. $A = \begin{bmatrix} 1 & 2 \\ 4 & 3 \end{bmatrix}$ 일때, 다음을 구하시오.
+
+1) 고유값 $\lambda$ 를 구하시오.
+
+2) 각 고유값 $\lambda$ 에 따른 고유 공간을 구하시오.
+
+
+
+문제2. 행렬 $A=\begin{bmatrix}1 & -1 & 4 \\ 0 & 2 & -1 \\ 0 &0 & -7 \end{bmatrix}$ 의 고유값(Eigen Value)를 구하라.
